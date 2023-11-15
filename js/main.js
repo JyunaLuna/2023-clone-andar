@@ -1,4 +1,40 @@
 $(document).ready(function () {
+  // 스와이퍼
+  const swiper1 = new Swiper(".swiper1", {
+    direction: "horizontal",
+    loop: true,
+    effect: "fade",
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  });
+
+  const swiper2 = new Swiper(".swiper2", {
+    direction: "horizontal",
+    loop: true,
+    effect: "fade",
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false,
+    },
+
+    pagination:
+      {
+        el: '.swiper2 .swiper-pagination',
+        clickable: true,
+      },
+  });
+
+  var swiper3 = new Swiper(".swiper3", {
+    slidesPerView: 2.2,
+    spaceBetween: 10,
+    freeMode: true,
+    pagination: {
+      el: ".swiper3 .swiper-pagination",
+      clickable: true,
+    },
+  });
   // 스크롤 발생시 실행
   $(window).scroll(function () {
     var scroll = $(document).scrollTop();
